@@ -1,0 +1,172 @@
+@charset "utf-08";
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  background:#23232e;
+  background-size: cover;
+  width:100%;
+  height:auto;
+  display:flexbox;
+}
+
+a {
+  color: rgb(10, 10, 10);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #fff;
+  height: 8vh;
+}
+
+main {
+  background-size: cover;
+  height: 92vh;
+  display:flexbox;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: rgb(2, 2, 2);
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+p{
+    font-family:system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    color: #fff;
+    font-size:clamp(20px, 16px, 16px);
+    text-align: justify;
+    padding: 3px;
+    margin: 4px;
+    
+}
+
+
+#tex{
+    text-align: center;
+    padding:3px;
+    background-color: #fff;
+    color: #070707;
+    font-family:'Open Sans Condensed', sans-serif;
+    margin: 4px;
+    padding: 3px;
+    
+    
+}
+#ponto{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:clamp(20px, 16px, 16px);
+    color:#9797C7;
+    text-align: justify;
+    margin: 2px;
+    display: inline-block;
+    height: auto;
+    width: 25%;
+}
+#pont > p{
+    font-size:clamp(20px, 16px, 16px);
+    margin: 4px;
+    padding: 9%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    text-align: end;
+}
+#form{
+    margin-top: 5%;
+    padding: 4px;
+
+}
+main> h2{
+    color: #9797C7;
+    font-size:clamp(20px, 16px, 16px);
+}
